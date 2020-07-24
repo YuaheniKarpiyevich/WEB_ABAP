@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;   
+  }
+
+.picture {
+    height: 500px;
+    width: 19%;
+    margin: 1px;
+  } 
+
+  @media screen and (max-width:1280px){
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;   
+      }
+    
+    .picture {
+        height: 250px;
+        width: 24%;
+        margin: 1px;
+      } 
+
+      .picture:nth-child(9) {
+        height: 500px;
+        width: 49%;
+        margin: 1px;
+      }
+  
+      .picture:nth-child(10) {
+        height: 500px;
+        width: 49%;
+        margin: 1px;
+      }
+    
+  }
