@@ -57,7 +57,7 @@
     }
 
     .item1 {
-        width: 38%;
+        width: 36%;
         height: 100px;
         background-color: rgb(196, 123, 5);
         margin: 5px;
@@ -78,17 +78,20 @@
     }
 
     .item4 {
-        width: 49%;
+        width: 48%;
         height: 100px;
         background-color: green;
         margin: 5px;
     }
 
     .item5 {
-        width: 49%;
+        width: 48%;
         height: 100px;
         background-color: blue;
         margin: 5px;
+    }
+    .item6 {
+        display: none;
     }
 
 }
@@ -102,20 +105,32 @@
     }
 
     .item1 {
+        width: 100%;
         height: 100px;
         background-color: green;
         margin: 10px;
     }
 
     .item2 {
+        width: 100%;
         height: 100px;
         background-color: blueviolet;
         margin: 5px;
     }
 
     .item3 {
+        width: 100%;
         height: 300px;
         background-color: red;
         margin: 5px;
+    }
+    .item4 {
+        display: none;
+    }
+    .item5 {
+        display: none;
+    }
+    .item6 {
+        display: none;
     }
 }
