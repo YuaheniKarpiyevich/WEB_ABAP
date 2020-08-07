@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [     
+        
+       {
+            "name": "HW1 - Chrome",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "url": "http://localhost:8080",
+            "file": "${workspaceFolder}/HW1/task1.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "HW2 - Chrome",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "url": "http://localhost:8080",
+            "file": "${workspaceFolder}/HW2/task1.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "HW2 - Task1",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "../web_new/HW2/task1.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "HW2 - Task2",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "../web_new/HW2/task2.js"
+        }    
+    ]
+}
