@@ -47,6 +47,8 @@
 	document.addEventListener("DOMContentLoaded", function () {
 		var form = document.getElementById("mainForm");
     var addButton = document.getElementById("add");
+    var updButton = document.getElementById("upd");
+    var delButton = document.getElementById("del");
     var selectType = document.getElementById("typeClass");
     var divpage = document.getElementById("divnop");
     var divsecond = document.getElementById("divnos");
@@ -84,7 +86,7 @@
           }
         });
   
-        xhr.open("POST", "http://195.50.2.67:2403/book/");
+        xhr.open("POST", "http://localhost:2403/books/");
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.send(jsonData);
   
@@ -103,7 +105,7 @@
             onRead();
           }
         });
-        xhr.open("PUT", "http://195.50.2.67:2403/book/"+document.getElementById("id").value);
+        xhr.open("PUT", "http://localhost:2403/books/"+document.getElementById("id").value);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.send(jsonData);
       });
@@ -119,7 +121,7 @@
             onRead();
           }
         });
-        xhr.open("DELETE", "http://195.50.2.67:2403/book/"+document.getElementById("id").value);
+        xhr.open("DELETE", "http://localhost:2403/books/"+document.getElementById("id").value);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.send();
       });
@@ -149,7 +151,7 @@
       }
   });
 
-  xhr.open("GET", "http://195.50.2.67:2403/book/");
+  xhr.open("GET", "http://localhost:2403/books/");
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send();
 }
@@ -176,11 +178,11 @@ row.appendChild(publisher);
 
   var author =document.createElement('td');
   author.innerText=BOOKs['author'];
-row.appendChild(species);
+row.appendChild(author);
 
 var booksize =document.createElement('td');
 
-if(BOOKs.hasOwnProperty("numberofseconds")){
+if(BOOKs['uom'] === 'second'){
   booksize.innerText=BOOKs['numberofseconds'];
   row.appendChild(booksize);
 } else {
@@ -190,7 +192,7 @@ if(BOOKs.hasOwnProperty("numberofseconds")){
 
   var uom =document.createElement('td');
   uom.innerText=BOOKs['uom'];
-row.appendChild(uom);
+  row.appendChild(uom);
 
   return row;
 }
