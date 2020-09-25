@@ -1,9 +1,8 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/core/UIComponent",
-	'sap/ui/model/json/JSONModel',
-	"../model/formatter"
-], function (Controller,UIComponent,JSONModel,formatter) {
+	'sap/ui/model/json/JSONModel'
+], function (Controller,UIComponent,JSONModel) {
 	"use strict";
 
 	return Controller.extend("Task.Task.controller.View1", {
